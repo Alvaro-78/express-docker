@@ -1,0 +1,21 @@
+
+version: '3.5'
+services:
+  api:
+    build: ./api
+    volumes:
+      - ./api:/api
+      - /api/node_modules
+    ports:
+      - 8181:8181
+  app:
+    build: ./app
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    environment:
+      - PORT=8081 
+    ports:
+      - 8081:8081
+    depends_on:
+      - api
