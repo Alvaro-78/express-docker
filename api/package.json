@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "nodemon --exec node api.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^2.0.7",
+    "npm": "^7.5.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
